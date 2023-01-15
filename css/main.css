@@ -1,3 +1,5 @@
+
+
 /* COLOR VARIABLES FOR APP */
 :root {
     ---color-dark: #000;
@@ -18,7 +20,8 @@
 *,*::before,*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -38,14 +41,20 @@ body {
 /* ********************** TOP HEADER  */
 .header {
     height: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: var(---color-dark);
     color: var(---color-light);
 
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 
@@ -56,8 +65,12 @@ body {
 }
 
 .header .top-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 3rem;
 }
 
@@ -90,13 +103,27 @@ body {
     width: 90%;
     margin: 0 auto;
 
+    display: -ms-grid;
+
     display: grid;
+    -ms-grid-columns: 30% 3rem 70%;
     grid-template-columns: 30% 70%;
     grid-gap: 3rem;
 
     height: 80vh;
 }
 
+
+@media only screen and (max-width: 769px) {
+    .app-ai-grid {
+        display: -ms-grid !important;
+        display: grid !important;
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        height: auto !important;
+        padding: 2rem;
+    }
+}
 
 .ai-grid-y-1 {
     border: 1px solid var(---color-grey);
@@ -126,9 +153,15 @@ body {
 }
 
 .ask-ai-idea {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border: 1px solid #eee;
     padding: 1rem 2rem;
     border-radius: 100px;
@@ -141,8 +174,12 @@ body {
 }
 
 .ai-idea-count {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.6rem;
     margin-right: .5rem;
    
@@ -162,8 +199,14 @@ body {
     color: var(--color-app-success);
     font-size: 2.5rem;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .ai-style {
@@ -180,7 +223,8 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 1rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     padding: .4rem;
     background: var(--color-app-success);
 }
@@ -209,7 +253,8 @@ body {
 .ai-image-display img {
     width: 350px;
     height: 350px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 5px;
 
     margin-bottom: 2rem;
